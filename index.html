@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<h1>es6 input - output calculater</h1>
+
+<form  onsubmit="doSum(event)">
+
+  first number:  <input type="number" id="first" required step="0.1" ><br><br>
+  second number: <input type="number" id="second" required step="0.1" ><br><br>
+<button>sum</button>
+
+</form>
+ <h2 id="ShowResultScreen" ></h2>
+
+<!-- /////////////////////////////////////////////////// -->
+
+
+ <script>
+
+
+function doSum(event){
+    event.preventDefault();
+
+    let firstNum = document.querySelector("#first").value;
+    let secondNum = document.querySelector("#second").value;
+console.log(firstNum);
+console.log(secondNum);
+
+let result=  Number(firstNum) +Number(secondNum)  ;
+
+
+let message =`The rtesult of ${firstNum} and ${secondNum} is ${result}`
+document.querySelector("#ShowResultScreen").innerHTML= message 
+
+
+}
+
+
+
+    </script>
+</body>
+</html>
